@@ -8,7 +8,7 @@ class Image(models.Model):
                              related_name='images_created',
                              on_delete=models.CASCADE)
 
-    title = models.URLField()
+    title = models.CharField(max_length=20)
     slug = models.SlugField(max_length=200,
                             blank=True)
     url = models.URLField()
